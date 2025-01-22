@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = ["Hoang Le"]
+readme = "README.md"
+packages = [
+    { include = "app" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+uvicorn = "^0.23.2"
+langserve = {extras = ["server"], version = ">=0.0.30"}
+pydantic = "^2.9.2"
+langchain-core = "^0.3.17"
+langchain-openai = "^0.2.8"
+langgraph = "^0.2.46"
+python-dotenv = "^1.0.1"
+langgraph-checkpoint-postgres = "^2.0.12"
+langchain = "^0.3.14"
+langchain-community = "^0.3.14"
+psycopg2 = "^2.9.10"
+openmeteo-requests = "^1.3.0"
+requests-cache = "^1.2.1"
+pinecone = {extras = ["grpc"], version = "^5.4.2"}
+llama-index = "^0.12.12"
+llama-index-vector-stores-pinecone = "^0.4.2"
+llama-index-readers-file = "^0.4.3"
+llama-index-embeddings-openai = "^0.3.1"
+llama-index-sparse-embeddings-fastembed = "^0.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+langchain-cli = ">=0.0.15"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
