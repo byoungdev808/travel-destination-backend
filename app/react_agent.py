@@ -28,7 +28,7 @@ import json
 from dotenv import load_dotenv
 load_dotenv()
 
-DATABASE_URL = 'postgresql://postgres.alwipywdwemgsncsbtwv:NYITe2BA43hphq0x@aws-0-us-west-1.pooler.supabase.com:5432/postgres'
+DATABASE_URL = os.environ['DATABASE_URL']
 
 @tool
 def get_destination_tool():

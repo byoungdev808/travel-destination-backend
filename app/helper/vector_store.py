@@ -33,15 +33,8 @@ if index_name not in [index.name for index in pc.list_indexes()]:
 # Initialize your index 
 pinecone_index = pc.Index(index_name)
 
-# Initialize VectorStore
-sparse_embedding_model = FastEmbedSparseEmbedding(
-    model_name="prithivida/Splade_PP_en_v1"
-)
-
 vector_store = PineconeVectorStore(
     pinecone_index=pinecone_index,
-    # add_sparse_vector=True,
-    # sparse_embedding_model=sparse_embedding_model
 )
 
 node_parser = SentenceSplitter(chunk_size=200, chunk_overlap=20)
